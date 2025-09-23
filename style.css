@@ -1,13 +1,12 @@
-@import url('https://fonts.cdnfonts.com/css/ibm-plex-mono');
+@import url("https://fonts.cdnfonts.com/css/ibm-plex-mono");
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
-  --bg: #000000;
-  --fg: #FFFFFF;
-  --ac: #0066AA;
+  font-family: "IBM Plex Mono", monospace;
+  /*--bg: #000000;
+  --fg: #ffffff;
+  --ac: #0066aa;*/
   background: var(--bg);
   color: var(--fg);
-  /*--testing: url(images/forest.webp)*/
 }
 
 #site {
@@ -36,4 +35,8 @@ img {
 a {
   color: var(--ac);
   text-decoration: none;
+}
+
+.theme-name {
+  cursor: pointer;
 }
