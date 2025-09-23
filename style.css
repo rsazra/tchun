@@ -1,0 +1,39 @@
+@import url('https://fonts.cdnfonts.com/css/ibm-plex-mono');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  --bg: #000000;
+  --fg: #FFFFFF;
+  --ac: #0066AA;
+  background: var(--bg);
+  color: var(--fg);
+  /*--testing: url(images/forest.webp)*/
+}
+
+#site {
+  width: 64ch;
+  margin: 0 auto;
+}
+
+img {
+  opacity: 0.6;
+}
+
+#nav {
+  /*white-space: pre;*/
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#content {
+  white-space: pre-wrap;
+}
+
+#header {
+  background: var(--ac);
+}
+
+a {
+  color: var(--ac);
+  text-decoration: none;
+}
