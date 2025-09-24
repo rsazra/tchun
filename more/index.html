@@ -7,41 +7,68 @@
     <link href="/reset.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link id="theme" href="/themes/ciel.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+    :root {
+      --chlorophyll-bg: #229911;
+      --chlorophyll-fg: #99ff99;
+      --chlorophyll-ac: #33ff11;
+
+      --ciel-bg: #1155dd;
+      --ciel-fg: #ffffff;
+      --ciel-ac: #aabb22;
+
+      --corporate-bg: #333;
+      --corporate-fg: #bbb;
+      --corporate-ac: #999;
+
+      --ink-bg: #111;
+      --ink-fg: #eee;
+      --ink-ac: #929;
+
+      --modern-bg: #eee;
+      --modern-fg: #111;
+      --modern-ac: #11d;
+
+      --ochre-bg: #744;
+      --ochre-fg: #e33;
+      --ochre-ac: #cc2;
+    }
+    </style>
   </head>
   <body>
     <div id="site">
       <div id="header"><a href="/"><img id="header-image" src="/images/ciel.webp"></a></div>
       <br>
       <div id="nav">
-        <a href="main">main</a>
-        <a href="micro">micro</a>
-        <a href="more">more</a>
+        <a href="/main">main</a>
+        <a href="/micro">micro</a>
+        <a href="/more">more</a>
       </div>
-      ----------------------------------------------------------------
       <div id="content">
+----------------------------------------------------------------
 Click a theme below to switch to it.
 
-<span class="theme-name" data-theme="chlorophyll" style="background: #229911; color: #99ff99;">- chlorophyll <span style="color: #33ff11; font-family: sans-serif">&#x2766;</span></span>
+<span class="theme-name" data-theme="chlorophyll" style="background: var(--chlorophyll-bg); color: var(--chlorophyll-fg);"><span style="color: var(--chlorophyll-ac);">&#x2698;</span> chlorophyll <span style="color: var(--chlorophyll-ac);">&#x2698;</span></span>
 
-<span class="theme-name" data-theme="ciel" style="background: #1155dd; color: #ffffff;">- ciel <span style="color: #aabb22; font-family: sans-serif">&#x2600;</span></span>
+<span class="theme-name" data-theme="ciel" style="background: var(--ciel-bg); color: var(--ciel-fg)"><span style="color: var(--ciel-ac);">&#x2600;</span> ciel <span style="color: var(--ciel-ac);">&#x2600;</span></span>
 
-<span class="theme-name" data-theme="corporate" style="background: #333; color: #bbb;">- corporate <span style="color: #999; font-family: sans-serif">&#x26EB;</span></span>
+<span class="theme-name" data-theme="corporate" style="background: var(--corporate-bg); color: var(--corporate-fg);"><span style="color: var(--corporate-ac);">&#x26EB;</span> corporate <span style="color: var(--corporate-ac);">&#x26EB;</span></span>
 
-<span class="theme-name" data-theme="modern" style="background: #eee; color: #111;">- modern <span style="color: #11d; font-family: sans-serif">&#x2605;</span></span>
+<span class="theme-name" data-theme="ink" style="background: var(--ink-bg); color: var(--ink-fg);"><span style="color: var(--ink-ac);">&#x26EF;</span> ink <span style="color: var(--ink-ac);">&#x26EF;</span></span>
 
-<span class="theme-name" data-theme="ochre" style="background: #744; color: #e33;">- ochre <span style="color: #cc2; font-family: sans-serif">&#x26F0;</span></span>
+<span class="theme-name" data-theme="modern" style="background: var(--modern-bg); color: var(--modern-fg);"><span style="color: var(--modern-ac);">&#x26C7;</span> modern <span style="color: var(--modern-ac);">&#x26C7;</span></span>
 
-<span class="theme-name" data-theme="ink" style="background: #111; color: #eee;">- ink <span style="color: #929; font-family: sans-serif">&#x2712;</span></span>
+<span class="theme-name" data-theme="ochre" style="background: var(--ochre-bg); color: var(--ochre-fg);"><span style="color: var(--ochre-ac);">&#x26F0;</span> ochre <span style="color: var(--ochre-ac);">&#x26F0;</span></span>
       </div>
     </div>
     <script>
-    // GETTING THEME
       const storedTheme = localStorage.getItem("theme");
       if (storedTheme) {
         document.querySelector('#theme').setAttribute('href', `/themes/${storedTheme}.css`);
         document.querySelector('#header-image').setAttribute('src', `/images/${storedTheme}.webp`)
       }
-    // CHANGING THEME
+
+    // theme changing
       const themes = document.querySelectorAll('.theme-name');
       themes.forEach(th => th.addEventListener('click', event => {
         const dataTheme = th.dataset.theme

@@ -1,11 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main tchun</title>
+    <link href="/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link id="theme" href="/themes/ciel.css" rel="stylesheet" type="text/css" media="all" />
   </head>
   <body>
+    <div id="site">
+      <div id="header">
+        <a href="/"><img id="header-image" src="/images/ciel.webp" /></a>
+      </div>
+      <br />
+      <div id="nav">
+        <a href="/main">main</a>
+        <a href="/micro">micro</a>
+        <a href="/more">more</a>
+      </div>
+      <div id="content">
+----------------------------------------------------------------
+
+                             2025
+
+ <a>example post</a>............................................may 13
+      </div>
+    </div>
+    <script>
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme) {
+        document.querySelector('#theme').setAttribute('href', `/themes/${storedTheme}.css`);
+        document.querySelector('#header-image').setAttribute('src', `/images/${storedTheme}.webp`)
+      }
+    </script>
   </body>
 </html>
