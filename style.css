@@ -2,9 +2,6 @@
 
 body {
   font-family: "IBM Plex Mono", monospace;
-  /*--bg: #000000;
-  --fg: #ffffff;
-  --ac: #0066aa;*/
   background: var(--bg);
   color: var(--fg);
 }
@@ -19,17 +16,12 @@ img {
 }
 
 #nav {
-  /*white-space: pre;*/
   display: flex;
   justify-content: space-evenly;
 }
 
 #content {
   white-space: pre-wrap;
-}
-
-#header {
-  background: var(--ac);
 }
 
 a {

@@ -20,30 +20,35 @@
       ----------------------------------------------------------------
       <div id="content">
 Click a theme below to switch to it.
-- <span class="theme-name" data-header="/images/chlorophyll.webp">chlorophyll</span>
-- <span class="theme-name" data-header="/images/ciel.webp">ciel</span>
+
+<span class="theme-name" data-theme="chlorophyll" style="background: #229911; color: #99ff99;">- chlorophyll <span style="color: #33ff11; font-family: sans-serif">&#x2766;</span></span>
+
+<span class="theme-name" data-theme="ciel" style="background: #1155dd; color: #ffffff;">- ciel <span style="color: #aabb22; font-family: sans-serif">&#x2600;</span></span>
+
+<span class="theme-name" data-theme="corporate" style="background: #333; color: #bbb;">- corporate <span style="color: #999; font-family: sans-serif">&#x26EB;</span></span>
+
+<span class="theme-name" data-theme="modern" style="background: #eee; color: #111;">- modern <span style="color: #11d; font-family: sans-serif">&#x2605;</span></span>
+
+<span class="theme-name" data-theme="ochre" style="background: #744; color: #e33;">- ochre <span style="color: #cc2; font-family: sans-serif">&#x26F0;</span></span>
+
+<span class="theme-name" data-theme="ink" style="background: #111; color: #eee;">- ink <span style="color: #929; font-family: sans-serif">&#x2712;</span></span>
       </div>
     </div>
     <script>
+    // GETTING THEME
       const storedTheme = localStorage.getItem("theme");
       if (storedTheme) {
         document.querySelector('#theme').setAttribute('href', `/themes/${storedTheme}.css`);
+        document.querySelector('#header-image').setAttribute('src', `/images/${storedTheme}.webp`)
       }
-      const storedImg = localStorage.getItem("header");
-      if (storedImg) {
-        document.querySelector('#header-image').setAttribute('src', storedImg)
-      }
-    // ABOVE FOR GETTING THEME
+    // CHANGING THEME
       const themes = document.querySelectorAll('.theme-name');
-
       themes.forEach(th => th.addEventListener('click', event => {
-        console.log(th)
-        localStorage.setItem("theme", th.innerText)
-        document.querySelector('#theme').setAttribute('href', `/themes/${th.innerText}.css`);
-        localStorage.setItem("header", th.dataset.header)
-        document.querySelector('#header-image').setAttribute('src', th.dataset.header)
+        const dataTheme = th.dataset.theme
+        localStorage.setItem("theme", dataTheme)
+        document.querySelector('#theme').setAttribute('href', `/themes/${dataTheme}.css`);
+        document.querySelector('#header-image').setAttribute('src', `/images/${dataTheme}.webp`)
       }));
-    // AND ABOVE FOR CHANGING IT
     </script>
   </body>
 </html>
