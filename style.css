@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/sf-mono");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 @media (max-width: 650px) {
   body {
@@ -37,4 +38,8 @@ a {
 
 .theme-name {
   cursor: pointer;
+}
+
+p {
+  font-family: "Libre Baskerville", serif;
 }

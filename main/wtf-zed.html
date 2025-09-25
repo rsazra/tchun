@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wtf zed</title>
+    <link href="/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link id="theme" href="/themes/modern.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <div id="site">
+      <div id="header">
+        <a href="/"><img id="header-image" src="/images/modern.webp" /></a>
+      </div>
+      <br />
+      <div id="nav">
+        <a href="/main">main</a>
+        <a href="/micro">micro</a>
+        <a href="/more">more</a>
+      </div>
+      <div id="content">
+----------------------------------------------------------------
+
+<strong>wtf zed                                              sep 25 2025</strong>
+
+<p><a href="https://zed.dev/">Zed</a> is my favourite code editor. It's fast, open-source, looks pretty good, and has a good vim mode (I don't actually use this much, but it's nice to have as an option to practice/try it out/hopefully eventually move to using it full time). The catch is that it's venture backed.</p>
+<p><a href="https://github.com/zed-industries/zed/issues/5120">Issue #5120</a> was submitted November 18, 2022 (nearly three years ago at the time of writing). It requests the ability to hide the status and title bar of the editor. It has 288 thumbs-up reactions and extensive discussion supporting it. At first, the Zed employees claimed the title bar could not be removed as it displayed important information to users (why can't users choose to ignore that information?). Later, most of the individual features of the tab bar were either moved or received a setting for removal. The bar is completely empty for me right now! And yet inexplicably, the bar itself must remain.</p>
+<p>Recently, Zed user <em>bgub</em> (Ben Gubler) submitted <a href="https://github.com/zed-industries/zed/pull/37428">Pull Request #37428</a> to provide an option for hiding the bar. The solution was accepted and merged by Zed maintainer <em>SomeoneToIgnore</em>. 2 weeks later, they reverted it, citing feedback from the core Zed team saying <em>"there are plans for the new redesign to heavily use the title bar and the new redesign wants it to always be present"</em>. This sucks.</p>
+<p>I recently saw a fork of Zed called <a href="https://github.com/zedless-editor/zedless">Zedless</a>, focused on improving privacy and being local-first. It is currently marked as in-progress with no releases, with the last activity from the maintainer being over a month ago. I find it unlikely this will become a viable alternative, but I would love to be wrong, and would love to see a setting for hiding the title bar in it.</p>
+<p>I almost hope Zed Industries ends up failing. Maybe the community would run the project better, though I would be concerned about maintenance given how complex the project is. (Rust is hard but at least it's popular — I'm not sure how many people would be willing to maintain the bespoke graphics/rendering code for free). </p>
+----------------------------------------------------------------
+      </div>
+    </div>
+    <script>
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme) {
+        document.querySelector('#theme').setAttribute('href', `/themes/${storedTheme}.css`);
+        document.querySelector('#header-image').setAttribute('src', `/images/${storedTheme}.webp`)
+      }
+    </script>
+  </body>
+</html>
