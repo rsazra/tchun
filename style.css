@@ -79,7 +79,6 @@
 }
 body {
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
   background: var(--bg);
   color: var(--fg);
 }
@@ -114,4 +113,5 @@ a {
 
 p {
   font-family: "Libre Baskerville", serif;
+  line-height: 1.6;
 }
