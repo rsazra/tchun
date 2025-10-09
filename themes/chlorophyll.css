@@ -3,3 +3,7 @@
   --fg: #afa;
   --ac: #3f1;
 }
+
+#header {
+  background-color: var(--ac);
+}

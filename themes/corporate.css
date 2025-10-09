@@ -3,3 +3,7 @@
   --fg: #ccc;
   --ac: #999;
 }
+
+#header {
+  background-color: var(--bg);
+}
