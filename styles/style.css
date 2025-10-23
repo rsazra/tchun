@@ -31,7 +31,11 @@ img {
 
 a {
   color: var(--ac);
+  font-weight: bold;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .theme-name {
