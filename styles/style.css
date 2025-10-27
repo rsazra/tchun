@@ -42,7 +42,8 @@ a:hover {
   cursor: pointer;
 }
 
-p {
+p,
+li {
   font-family: "Libre Baskerville", serif;
   line-height: 1.6;
 }
