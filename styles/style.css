@@ -50,6 +50,11 @@ li {
   line-height: 1.6;
 }
 
+h2,
+h3 {
+  text-align: center;
+}
+
 aside {
   display: inline;
   opacity: 0.6;
