@@ -42,8 +42,15 @@ a:hover {
   cursor: pointer;
 }
 
+h2,
+h3,
 p,
 li {
   font-family: "Libre Baskerville", serif;
   line-height: 1.6;
+}
+
+aside {
+  display: inline;
+  opacity: 0.6;
 }
