@@ -55,7 +55,9 @@ h3 {
   text-align: center;
 }
 
-aside {
-  display: inline;
+.aside {
+  padding: 0 2em;
   opacity: 0.6;
+  font-size: 0.7em;
+  line-height: 1.4;
 }
